@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Info - Tourist Safety</title>
+<link rel="stylesheet" href="style.css">
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyBTPUjCyECX6HEzHJJvQaYxGC2k-txw_HU",
+    authDomain: "qr-code-928a4.firebaseapp.com",
+    projectId: "qr-code-928a4",
+    storageBucket: "qr-code-928a4.firebasestorage.app",
+    messagingSenderId: "678893564518",
+    appId: "1:678893564518:web:a2a2b027ff21cd2f55b3a7",
+    measurementId: "G-B0TF5V403N"
+  };
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+</head>
+<body>
+<div class="card">
+  <div class="lang-switcher">
+    <button id="langBtn" onclick="toggleLanguage()">English</button>
+  </div>
+  <div id="content">جاري التحميل...</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

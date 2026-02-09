@@ -1,0 +1,180 @@
+:root {
+  --primary: #320096; /* اللون الموف الجديد */
+  --yellow: #fdcf60;
+  --red: #b81342;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, var(--primary), #1a004d);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 20px;
+  /* الاتجاه يتغير تلقائياً عبر الجافاسكريبت */
+}
+
+.card {
+  background: #fff;
+  width: 100%;
+  max-width: 450px;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  animation: fadeUp 0.8s ease;
+  position: relative; /* مهم لتموضع زر اللغة */
+}
+
+/* تنسيق زر تبديل اللغة */
+.lang-switcher {
+  position: absolute;
+  top: 15px;
+  inset-inline-start: 15px; /* يضبط مكانه حسب اتجاه الصفحة */
+  z-index: 10;
+}
+
+#langBtn {
+  background: var(--yellow);
+  color: var(--primary);
+  border: none;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-top: 0; /* إلغاء مارجن البوتون العام */
+  width: auto; /* إلغاء عرض الـ 100% */
+}
+
+#langBtn:hover {
+  transform: scale(1.05);
+  background: #f7c143;
+}
+
+h2 {
+  margin-top: 20px;
+  color: var(--primary);
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #444;
+  font-size: 0.9rem;
+  text-align: inherit; /* يتبع اتجاه النص */
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 2px solid #f0f0f0;
+  font-size: 14px;
+  transition: 0.3s;
+  background: #fafafa;
+  text-align: inherit;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+  background: #fff;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: var(--primary);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(50, 0, 150, 0.2);
+}
+
+button:hover {
+  background: #250070;
+  transform: translateY(-2px);
+}
+
+.info-box p {
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 8px 0;
+  border-inline-start: 4px solid var(--primary); /* يتكيف مع اليمين واليسار */
+  font-size: 0.95rem;
+  text-align: inherit;
+}
+
+.pin-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--primary);
+  width: 100% !important;
+  max-width: 250px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+}
+
+.edit-style {
+  background: var(--yellow);
+  color: var(--primary);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.error-banner {
+  background: var(--red);
+  color: white;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 8px;
+  text-align: center;
+  animation: shake 0.3s;
+}
+
+.warning {
+  color: var(--red);
+  font-weight: bold;
+  text-align: center;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(25px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
